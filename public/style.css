@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('your-weather-image.jpg') no-repeat center center/cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); 
+    z-index: -1;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="text"] {
+    width: 250px; 
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff5e42; 
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    background-color: #ff7b62; 
+}
+
+.weather-info {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+h1, p {
+    color: white;
+}
+
+.weather-info h1, .weather-info p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.weather-info img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-info p {
+    margin-bottom: 8px; 
+    font-size: 18px; 
+}
+
+
+.input-container{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    text-align: center;
+}
+
+input,  p{
+    width: 90%;
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    input {
+        width: 180px;
+    }
+}
